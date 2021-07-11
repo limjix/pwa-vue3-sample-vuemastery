@@ -16,18 +16,23 @@
     </v-icon>
   </v-btn>
 
-  <v-card color="grey-lighten-3 my-2" v-for="item in todoItems">
-    <v-container>
-      <v-row>
-        <v-col cols="11">
-          <div class="d-flex inline">{{ item.text }}</div>
-        </v-col>
-        <v-col cols="1">
-          <input type="checkbox" :checked="item.check">
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-card>
+  <v-row justify="center">
+    <v-col cols="12" md="6">
+      <v-card color="grey-lighten-3 my-2" v-for="item in todoItems">
+        <v-container>
+          <v-row>
+            <v-col cols="11">
+              <div class="d-flex inline">{{ item.text }}</div>
+            </v-col>
+            <v-col cols="1">
+              <input type="checkbox" :checked="item.check">
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
+    </v-col>
+  </v-row>
+
 
   <v-dialog
       v-model="dialog"

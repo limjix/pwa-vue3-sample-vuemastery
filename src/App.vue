@@ -29,7 +29,7 @@
         <v-icon>mdi-menu</v-icon>
       </v-btn>
 
-      <div class="px-5 white--text">My Simple PWA</div>
+      <div class="px-5 white--text">Progressive Web App</div>
 
       <v-spacer></v-spacer>
 
