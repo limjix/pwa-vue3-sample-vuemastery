@@ -3,11 +3,23 @@ module.exports = {
     'vuetify'
   ],
   pwa: {
-    name: 'PWA-Vue3-Sample',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
-    appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
+    manifestOptions: {
+      name: "MyPWA",
+      short_name: "MyPWA",
+      icons: [
+         {"src":"./img/icons/myicon.png","sizes":"512x512","type":"image/png"}
+      ],
+      background_color: "#12b0db",
+      // display: "standalone",
+      // theme_color: "#000000",
+      // background_color: "red",
+      // icons: [
+      //   {
+      //     src: "./favicon.svg",
+      //     sizes: "512x512",
+      //   },
+      // ],
+    },
 
     // configure the workbox plugin
     workboxPluginMode: 'GenerateSW',
@@ -16,5 +28,8 @@ module.exports = {
     //   swSrc: 'src/service-worker.js',
     //   // ...other Workbox options...
     // }
+
+    // appleMobileWebAppCapable: 'yes',
+    // appleMobileWebAppStatusBarStyle: 'black',
   }
 }
